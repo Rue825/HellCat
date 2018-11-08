@@ -10,7 +10,21 @@
 
 	function closeDB () {
 		global $mysqli;
-		$mysqli->close ();
+		$mysqli->close();
+	}
+
+	function getComment ($limit, $id) {
+		global $mysqli;
+		global $where;
+		connectDB();
+		if($id)
+			$where = "WHERE `id` = ".$id;
+		$result = $mysqli->query("SELECT * FROM `comment` $where ORDER BY `id` DESC LIMIT $limit");
+		closeDB();
+		if(!$id)
+			return resultToArray ($result);
+		else
+			return $result->fetch_assoc();
 	}
 
 	function getNews ($limit, $id) {
