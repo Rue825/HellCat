@@ -23,9 +23,16 @@
       <?php
         $id = $_GET['id'];
         $users = R::load('users', $id);
-        $deleteusers = R::load('users', $id);
-        R::trash($deleteusers);
-        echo '<div style="color: green;">Вы удалили пользователя!</div>';  
+        if (trim($users['id'])==2) 
+        {
+          echo '<div style="color: red;">Нельзя удалить администратора!</div>';
+        }
+        else
+        {
+          $deleteusers = R::load('users', $id);
+          R::trash($deleteusers);
+          echo '<div style="color: green;">Вы удалили пользователя!</div>'; 
+        } 
       ?>
       <a href="/admin/settingusers.php">
       <input type="button" style="cursor: pointer; float: left; margin-left:0%" value="Вернуться на управление данными о пользователях"/>
