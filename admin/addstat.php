@@ -61,6 +61,7 @@
           	  R::store($addstat);
           	  echo '<div style="color: green;">Вы добавили статью!</div>';
           	  $data['title'] ='';
+          	  $data['author'] ='';
           	  $data['intro_text'] ='';
           	  $data['full_text'] ='';
         	}
@@ -70,7 +71,7 @@
         	}	
     	}
 		?>
-  <form method="POST" action="admin/addstat.php">
+  <form method="POST" action="/admin/addstat.php">
     <div id="wrapper">
     <div id="leftCol">      
     <input type="text" name="title" value="<?php echo @$data['title']?>" placeholder="Введите статью" /><br />
