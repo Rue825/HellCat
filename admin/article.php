@@ -65,8 +65,12 @@
  				if ((isset($_SESSION['logged_user']) && ($_SESSION['logged_user']['auth_key']==1)))
  				{
  					echo '<form method="POST" action="/admin/deletecomment.php?id='.$comments["id"].'">
- 						  <p>Дата создания: '.$comments['date_add'].' / '.$comments['time_add'].'</p>
- 						  <p>Автор: '.$comments['name'].', почта: ' .$comments['email'].'</p>
+
+ 						  <h1>Дата создания: '.$comments['date_add'].' / '.$comments['time_add'].'
+ 						  <img src="img/logo.jpg" width = "120" height = "120" align="left"/>
+ 						  <h1>Автор: '.$comments['name'].', почта: ' .$comments['email'].'					  
+ 						  </h1>
+ 						  </h1>
  						  <p>'.$comments['message'].'</p>
  						  <a href="/admin/deletecomment.php?id='.$comments["id"].'" style="color:white">
 						  <input type="submit" value="Удалить" />
@@ -78,8 +82,11 @@
  				else
  				{
  					echo '<form method="POST" action="/admin/deletecomment.php?id='.$comments["id"].'">
- 						  <p>Дата создания: '.$comments['date_add'].' / '.$comments['time_add'].'</p>
- 						  <p>Автор: '.$comments['name'].', почта: ' .$comments['email'].'</p>
+ 						  <h1>Дата создания: '.$comments['date_add'].' / '.$comments['time_add'].'
+ 						  <img src="img/logo.jpg" width = "120" height = "120" align="left"/>
+ 						  <h1>Автор: '.$comments['name'].', почта: ' .$comments['email'].'					  
+ 						  </h1>
+ 						  </h1>
  						  <p>'.$comments['message'].'</p>
 						  <hr/>
 						  </form>
