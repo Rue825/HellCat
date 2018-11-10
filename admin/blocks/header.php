@@ -1,6 +1,6 @@
 <header id="header">
 	
-<h1><a href="/" title="Переход на главную страницу"> <img src="img/logo.jpg" class="setting" title="Переход на главную страницу"></a>HellCat by Sergei</h1>
+<h1><a href="/" title="Переход на главную страницу"> <img src="img/logo.jpg" class="setting" title="Переход на главную страницу">HellCat by Sergei</a></h1>
 <!-- <div class="toggle">
 		<i class="fa fa-bars menu" aria-hidden="true"></i>
 </div>  -->
