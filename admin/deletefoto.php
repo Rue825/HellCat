@@ -7,7 +7,7 @@
 	<?php 
 		global $id;
 		require_once "functions/functions.php";
-		$title = "Удаление статьи";
+		$title = "Удаление фотографию";
 		require_once "blocks/head.php"; 
 	?>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -25,7 +25,7 @@
         $fotogallery = R::load('fotogallery', $id);
         $deletefoto = R::load('fotogallery', $id);
         R::trash($deletefoto);
-        echo '<div style="color: green;">Вы удалили статью!</div>';  
+        echo '<div style="color: green;">Вы удалили фотографию!</div>';  
       ?>
       <a href="/admin/fotogallery.php">
       <input type="button" style="cursor: pointer; float: left; margin-left:0%" value="Вернуться к фотогалереи"/>
