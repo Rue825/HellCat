@@ -8,6 +8,7 @@
 		<ul>		
 			<li><a href="/admin/settingusers.php">Управление данными о пользователях</a></li>
 			<li><a href="/admin/fotogallery.php">Фотогалерея</a></li>
+			<li><a href="/admin/about.php">Информация о нас</a>
 			<li><a href="/admin/contact.php">Обратная связь</a></li>
 			<?php if (isset($_SESSION['logged_user'])): ?>
 			<li>Привет, <?php echo $_SESSION['logged_user']->login; ?>! </li>
