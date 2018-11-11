@@ -5,6 +5,8 @@
 <html>
 <head>
 	<?php 
+		global $id;
+		require_once "functions/functions.php";
 		$title = "Информация о нас";
 		require_once "blocks/head.php"; 
 	?>
@@ -13,19 +15,25 @@
 	<?php 
 		require_once "blocks/header.php"; 
 	?>
- 	<div id="wrapper">
- 		<div id="leftCol">
- 			<div id="about_us">
- 				<h2>Информация о нас</h2>
- 				<p>В Японии, Корее и Китае драконы считались одними из основных мифологических героев. Граждане этих стран свято верят в то, что когда-то давно эти существа действительно жили бок о бок с людьми...</p>
- 			</div>
- 		</div>
- 		<?php 
- 			require_once "blocks/rightCol.php"; 
- 		?>
- 	</div>
- 	<?php 
- 		require_once "blocks/footer.php"; 
- 	?>
+  <section id="seven" class="main style1 right dark fullscreen">
+		<div class="content box style1">
+			<h1>Информация о нас</h1>
+			<p>Сайт информационного портала о драконах. Разработал студент группы И-2-15 Жуйков Сергей</p>	
+			<div style="overflow: hidden; height: 250px;"><img src="img/flydragon.gif" align="middle" width="254" height="264" /></div>			
+		</div>
+	</section>
+      <?php 
+        require_once "blocks/footer.php"; 
+      ?>
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.poptrox.min.js"></script>
+      <script src="assets/js/jquery.scrolly.min.js"></script>
+      <script src="assets/js/jquery.scrollex.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+      <script src="js/index.js"></script>    
 </body>
 </html>

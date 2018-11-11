@@ -1,23 +1,19 @@
-<header>
-	<div id="logo">
-		<a href="/" title="Перейти на главную">
-			<span>Н</span>овости
-		</a>
-	</div>
-	<div id="menuHead">
-		<a href="/about.php">
-			<div style="margin-right: 5%">О нас</div>
-		</a>
-		<a href="/feedback.php">
-			<div>Обратная связь</div>
-		</a> 
-	</div>
-	<div id="regAuth">
-		<?php if (isset($_SESSION['logged_user'])): ?>
-			Привет, <?php echo $_SESSION['logged_user']->login; ?>!
-		<a href="/logout.php">Выйти</a>
-		<?php else : ?>
-		<a href="/auth.php">Войти</a>
-	<?php endif; ?>
-	</div>
+<header id="header">
+<h1><a href="/" title="Переход на главную страницу"><img src="img/logo.jpg" class="setting" title="Переход на главную страницу">HellCat by Sergei</a></h1>
+	<nav>
+		<ul>
+			<?php if (isset($_SESSION['logged_user']) && ($_SESSION['logged_user']['auth_key']==1))
+			echo '<li><a href="/admin/adminpanel.php">Перейти в режим админки</a></li>';
+			?>
+			<li><a href="/fotogallery.php">Фотогалерея</a></li>
+			<li><a href="/about.php">Информация о нас</a>
+			<li><a href="/contact.php">Обратная связь</a></li>
+			<?php if (isset($_SESSION['logged_user'])): ?>
+				Привет, <?php echo $_SESSION['logged_user']->login; ?>!
+				<li><a href="/logout.php">Выйти</a></li>
+			<?php else : ?>
+				<li><a href="/auth.php">Войти</a></li>
+			<?php endif; ?>
+		</ul>
+	</nav>
 </header>
