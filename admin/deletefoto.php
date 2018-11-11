@@ -7,7 +7,7 @@
 	<?php 
 		global $id;
 		require_once "functions/functions.php";
-		$title = "Удаление фотографию";
+		$title = "Удаление фотографии";
 		require_once "blocks/head.php"; 
 	?>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
